@@ -21,7 +21,7 @@ body {
 /* LAYOUT */
 header {
   position: relative;
-  height: 35vh;
+  height: 60vh;
   border-bottom: 7px solid #eee;
 }
 
@@ -30,7 +30,8 @@ main {
   color: #eee;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 2rem;
 }
 
 .left {
@@ -116,4 +117,57 @@ h1 {
 
 .label-score {
   margin-bottom: 2rem;
+}
+
+
+@media (max-width: 1200px) {
+  main {
+    height: 70vh;
+  }
+}
+
+@media (max-width: 767px) {
+  header {
+    height: 50vh;
+  }
+  h1 { font-size: 3.5rem; }
+}
+
+@media (max-width: 600px) {
+  header {
+    height: 40vh;
+  }
+  h1 { 
+    font-size: 3rem; 
+    top: 60%;
+    line-height: 1.5;
+  }
+  .again {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .between {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    right: auto;
+    top: 10rem;
+  }
+  .number {
+    font-size: 4rem;
+    width: 12rem;
+  }
+  main {
+    flex-direction: column;
+    justify-content: center;
+    gap: 5rem;
+  }
+  .guess {  
+    font-size: 4rem;
+    width: 20rem;
+  }
+  .right { text-align: center; width: 100%; }
+  .left { width: 100%; }
+  .message { margin-bottom: 4rem; }
 }
